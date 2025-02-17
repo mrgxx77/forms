@@ -1,0 +1,508 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Medium.woff') format('woff'),
+        url('../fonts/RobotoSlab-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Regular.woff') format('woff'),
+        url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto";
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-size: 30px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+    padding-top: 77px;
+    padding-bottom: 70px;
+}
+h2{
+    font-size: 20px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    font-weight: 700;
+    padding-bottom: 28px;
+}
+hr{
+    border: 0;
+    border-top: 1px;
+    width: 1000px;
+    height: 1px;
+    background-color: #e4e4ec;
+    margin-bottom: 50px;
+}
+textarea{
+    resize: vertical;
+}
+input,
+textarea,
+select{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button,
+select{
+    cursor: pointer;
+}
+
+
+
+/* стилізація опшенів */
+option{
+    min-width: 328px;
+    min-height: 35px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    appearance: none;
+    }
+option:checked{
+    appearance: none;
+    width: 328px;
+    height: 35px;
+    background-color: #3e6aff;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+
+/* стилізація чекбоксів */
+input[type=checkbox]{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+  }
+  
+  .check{
+    position: relative;
+  }
+  
+  .check span{
+    position: absolute;
+  }
+  
+  input:checked + span{
+    top: 30%;
+    left: 33%;
+    width: 5px;
+    height: 8px;
+    border-top: 2px solid #3e6aff;
+    border-left: 2px solid #3e6aff;
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+
+
+/* стилізація чекідів */
+input:checked:not(input[type=checkbox]){
+    border: none;
+    border: #3d69ff;
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+}
+
+
+
+/* перша форма */
+.simple-form{
+    padding-bottom: 50px;
+}
+.simple-form input[type=text],
+.simple-form input[type=email],
+.simple-form select{
+    min-width: 300px;
+    min-height: 11px;
+    padding: 15px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.simple-form select{
+    color: #1f222c;
+    min-width: 330px;
+}
+.simple-form textarea{
+    min-width: 305px;
+    min-height: 100px;
+    max-height: 200px;
+    background-color: #fff;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.simple-form button[type=submit]{
+    min-width: 330px;
+    min-height: 43px;
+    border-radius: 3px;
+    background-color: #12d661;
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+
+
+/* шоста форма */
+
+.lll{
+    position: sticky;
+    padding-top: 25px;
+    width: 310px;
+    height: 282px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+.lll input[type=text]{
+    
+    min-width: 260px;
+    min-height: 36px;
+}
+.lll label:has(input[type=text]){
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+.lll p:has(input[type=text]){
+    margin-top: 10px;
+}
+.l {
+    font-size: 13px;
+    color: #3e6aff;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin-left: 25px;
+    padding-bottom: 10px;
+}
+.lll button[type=submit]{
+    min-width: 260px;
+    min-height: 43px;
+    border-radius: 3px;
+    background-color: #12d661;
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 15px;
+}
+.lll label,
+.lll input,
+.lll button{
+    margin-left: 25px;
+}
+.lll input[type=checkbox]{
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+
+
+/* друга форма */
+.elements{
+    align-items: start;
+    justify-content: start;
+    padding-bottom: 50px;
+}
+.elements label{
+    font-size: 14px;
+    font-weight: 400;
+}
+.checkbox{
+    padding-left: 10px;
+}
+.radio{
+    padding-left: 15px;
+}
+.radio p,
+.checkbox p{
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+}
+.radio input,
+.checkbox input{
+    margin-right: 10px;
+}   
+label p:has(input:disabled){
+    color: #b3b3b3;
+}
+label p{
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.insert{
+    width: 473px;
+    height: 114px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+.insert label{
+    padding: 0px 20px;
+}
+.insert label:first-child{
+    padding-top: 25px;
+    justify-content: start;
+    padding-bottom: 15px;
+}
+.insert p:first-child{
+    padding-left: 60px; 
+}
+.insert span:first-child{
+    padding-left: 45px;
+}
+.insert label:last-child{
+    padding-bottom: 30px;
+    justify-content: start;
+}
+.insert p{
+    padding-left: 6px;
+    padding-right: 25px;
+}
+.nss p{
+    column-gap: 5px;
+}
+
+
+
+
+/* третя форма */
+.checkboxes{
+    padding-bottom: 50px;
+}
+.human p{
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+.human p:checked{
+    color: #3e6aff;
+}
+.mann input[type=checkbox]{
+    background-image: url(../img/man.png);
+}
+.womann input[type=checkbox]{
+    background-image: url(../img/woman.png);
+}
+.mann input:checked{
+    background-image: url(../img/mann.png);
+}
+.womann input:checked{
+    background-image: url(../img/womann.png);
+}
+.dddd label {
+    position: relative;
+    display: block; 
+    width: 40px;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-left: -400px;
+}
+  
+.dddd input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.dddd span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #3e6aff;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+
+
+/* четверта форма */
+.table-form{
+    padding-bottom: 50px;
+}
+.inputiki{
+    min-width: 500px;/
+    /* justify-content: start; */
+}
+.ggg h2{
+    font-size: 18px;
+    color: #1f222c;
+    text-transform: none;
+}
+.r-human{
+    justify-content: start;
+}
+.ggg label{
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+}
+.ggg input:not(input[type=file]),
+.ggg select{
+    min-width: 315px;
+    min-height: 11px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.ggg select{
+    min-width: 340px;
+}
+.ggg input[type=file]{
+    min-width: 42px;
+    border-radius: 3px;
+    background-color: #3e6aff;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    margin-bottom: 15px;
+}
+::placeholder{
+    color: #b3b3b3;
+}
+.ggg textarea{
+    min-width: 315px;
+    min-height: 100px;
+    max-height: 200px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.ggg button[type=submit]{
+    min-width: 340px;
+    min-height: 43px;
+    border-radius: 3px;
+    background-color: #12d661;
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+.text p{
+    padding-bottom: 30px;
+}
+
+
+/* п'ята форма */
+.table-form-five{
+    max-width: 680px;
+}
+.ddd label{
+    font-size: 13px;
+    color: #b3b3b3; 
+    font-weight: 400;
+}
+.ddd input,
+.ddd select{
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: start;
+    width: 100%;
+}
+.ddd label p{
+    padding-top: 5px;
+}
+.ddd span hr{
+    max-width: 706px;
+    margin-bottom: 25px;
+}
+.county{
+    min-width: 220px;
+}
+.adress{
+    min-width: 450px;
+}
+.sss button[type=submit]{
+    min-width: 180px;
+    min-height: 43px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+}
+.purchase{
+    border: none;
+    background-color: #12d661;
+    color: #ffffff;
+}
+.back{
+    background-color: #ffffff;
+    border: 1px solid #85868d;  
+    color: #6e6f77;
+}
