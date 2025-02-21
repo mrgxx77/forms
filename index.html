@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>стилізація форм та відправка на телеграм бота</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -146,8 +146,8 @@
                 <h2>03. стилізовані чекбокси</h2>
                 <div class="flex-between">
                     <div class="human">
-                        <label class="mann"><input type="radio"><p>Чоловік</p></label>
-                        <label class="womann"><input type="radio"><p>Жінка</p></label>
+                        <label class="mann"><input type="radio" name="gender" value="man"><p>Чоловік</p></label>
+                        <label class="womann"><input type="radio" name="gender" value="man"><p>Жінка</p></label>
                     </div>
                     <div class="dddd">
                         <p>
@@ -213,20 +213,21 @@
                             </tr>
                             <tr>
                                 <td>Стать:</td>
-                                <td class="r-human"><input type="radio" name="human" value="man">Чоловік</td>
-                                <td class="r-human"><input type="radio" name="human" value="woman">Жінка</td>
+                                <td class="r-human">
+                                    <label><input type="radio" name="human" value="man"><span>Чоловік</span></label>
+                                    <label><input type="radio" name="human" value="woman"><span>Жінка</span></label>
+                                 </td>
                             </tr>
                             <tr>
                                 <td>Фото:</td>
-                                <td><input type="file" name="file"></td>
+                                <td><button type="file" name="file">Виберіть файл</button></td>
                             </tr>
                             <tr>
                                 <td>Коментарій:</td>
                                 <td><textarea name="text" id="s" placeholder="Введіть текст повідомлення"></textarea></td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td><button type="submit">Зареєструватися</button></td>
+                                <td colspan="2"><button type="submit">Зареєструватися</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -252,13 +253,13 @@
                                 <td><input type="email" name="email"></td>
                                 <td><input type="tel" name="tel"></td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <span>
-                        <hr>
-                    </span>
-                    <table>
-                        <tbody class="ffive">
+                            <tr>
+                                <td colspan="3">
+                                    <span>
+                                        <hr>
+                                    </span>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>Країна</td>
                                 <td>Адреса</td>
@@ -273,7 +274,6 @@
                                     <option value="Німеччина">Німеччина</option>
                                 </select></td>
                                 <td colspan="2"><input type="text" class="www" name="adress"></td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>Місто</td>

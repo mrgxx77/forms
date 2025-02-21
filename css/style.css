@@ -110,17 +110,17 @@ input[type=checkbox]{
     width: 15px;
     height: 15px;
     border-radius: 3px;
-  }
+}
   
   .check{
     position: relative;
-  }
+}
   
   .check span{
     position: absolute;
-  }
+}
   
-  input:checked + span{
+  input[type=checkbox]:checked+ span{  
     top: 30%;
     left: 33%;
     width: 5px;
@@ -128,11 +128,11 @@ input[type=checkbox]{
     border-top: 2px solid #3e6aff;
     border-left: 2px solid #3e6aff;
     transform: translate(-50%, -50%) rotate(-135deg);
-  }
+}
 
 
 /* стилізація чекідів */
-input:focus:not(input[type=checkbox]){
+input:focus:not(input[type=checkbox], input[type=radio]){
     border: none;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
     border: #3d69ff;
@@ -329,7 +329,7 @@ label p{
     border-radius: 50%;
     margin-bottom: 10px;
 }
-.human p:checked{
+.human input:checked + p{
     color: #3e6aff;
 }
 .mann input[type=radio]{
@@ -382,7 +382,10 @@ label p{
   
   }
   .dddd input:checked + span {
-    left: 53%;
+    left: 70%;
+    top: 47%;
+    width: 21px;
+    height: 21px;
   }
 
 
@@ -396,15 +399,12 @@ label p{
     color: #1f222c;
     text-transform: none;
 }
-.r-human{
-    justify-content: start;
-}
 .ggg label{
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
 }
-.ggg input:not(input[type=file]),
+.ggg input:not(input[type=file], input[type=radio]),
 .ggg select{
     min-width: 315px;
     min-height: 11px;
@@ -416,8 +416,16 @@ label p{
 .ggg select{
     min-width: 340px;
 }
-.ggg input[type=file]{
-    min-width: 42px;
+.r-human input{
+    margin-bottom: 20px;
+}
+.r-human span{
+    padding-left: 10px;
+    padding-right: 48px;
+}
+.ggg button[type=file]{
+    padding: 16px 37px;
+    border: none;
     border-radius: 3px;
     background-color: #3e6aff;
     font-size: 14px;
@@ -448,6 +456,7 @@ label p{
     color: #ffffff;
     font-weight: 700;
     text-align: center;
+    margin-left: 165px; 
 }
 .text p{
     padding-bottom: 30px;
@@ -455,9 +464,6 @@ label p{
 .comm td{
     align-items: center;
 }
-.r-human{
-    justify-content: start;
-}   
 .ggg td{
     padding-right: 80px;
 }
