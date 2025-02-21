@@ -131,6 +131,21 @@ input[type=checkbox]{
 }
 
 
+/* стилізація радіо кнопок */
+input[type=radio]{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    outline: 1p solid #ccc;
+    background-color: #fff;
+}
+input[type=radio]:checked{
+    border: 4px solid #fff;  
+    background-color: #3d69ff;
+}
+
+
 /* стилізація чекідів */
 input:focus:not(input[type=checkbox], input[type=radio]){
     border: none;
@@ -279,25 +294,25 @@ label p{
     background-color: #f7f7f7;
     border: 1px solid #e5e5e5;
 }
-.insert label{
+.insert p{
     padding: 0px 20px;
 }
-.insert label:first-child{
+.insert p:first-child{
     padding-top: 25px;
     justify-content: start;
     padding-bottom: 15px;
 }
-.insert p:first-child{
+.insert label:first-child{
     padding-left: 60px; 
 }
-.insert p:first-child{
+.insert label:first-child{
     padding-left: 45px;
 }
 .insert label:last-child{
     padding-bottom: 30px;
     justify-content: start;
 }
-.insert p{
+.insert label{
     padding-left: 6px;
     padding-right: 25px;
 }
@@ -383,7 +398,7 @@ label p{
   }
   .dddd input:checked + span {
     left: 70%;
-    top: 47%;
+    top: 45%;
     width: 21px;
     height: 21px;
   }

@@ -108,29 +108,29 @@
                         </label>
                     </div>
                     <div class="insert">
-                        <label class="nss flex-between">Статус
-                            <p>
+                        <p class="nss flex-between">Статус
+                            <label>
                                 <span class="check">
                                     <input type="checkbox" name="status" value="new">
                                     <span></span>
                                 </span>
                                 <span>Новинки</span>
-                            </p>
-                            <p>
+                            </label>
+                            <label>
                                 <span class="check">
                                     <input type="checkbox" name="status" value="shares">
                                     <span></span>
                                 </span>
                                 <span>Акційні товари</span>
-                            </p>
-                            <p>
+                            </label>
+                            <label>
                                 <span class="check">
                                     <input type="checkbox" name="status" value="sale">
                                     <span></span>
                                 </span>
                                 <span>Розпродаж</span>
-                            </p>
-                        </label>
+                            </label>
+                        </p>
                         <label class="flex-between">Дата
                             <p><input type="datetime-local"></p>
                         </label>
@@ -146,8 +146,12 @@
                 <h2>03. стилізовані чекбокси</h2>
                 <div class="flex-between">
                     <div class="human">
-                        <label class="mann"><input type="radio" name="gender" value="man"><p>Чоловік</p></label>
-                        <label class="womann"><input type="radio" name="gender" value="man"><p>Жінка</p></label>
+                        <label class="mann"><input type="radio" name="gender" value="man">
+                            <p>Чоловік</p>
+                        </label>
+                        <label class="womann"><input type="radio" name="gender" value="man">
+                            <p>Жінка</p>
+                        </label>
                     </div>
                     <div class="dddd">
                         <p>
@@ -195,28 +199,29 @@
                             <tr>
                                 <td cla>ФІО:</td>
                                 <td><input type="text" placeholder="Введіть ім’я" name="UserName"></td>
-                            </td>
+                                </td>
                             <tr>
                                 <td>Пароль:</td>
-                                <td><input type="text" placeholder="Введіть не менше 6 символів" minlength="6" name="password"></td>
-                            </td>
+                                <td><input type="text" placeholder="Введіть не менше 6 символів" minlength="6"
+                                        name="password"></td>
+                                </td>
                             <tr>
                                 <td>Місто:</td>
                                 <td><select name="City" id="n">
-                                    <option value="Ваше місто" selected disabled>Ваше місто</option>
-                                    <option value="Хмельницький">Хмельницький</option>
-                                    <option value="Житомир">Житомир</option>
-                                    <option value="Львів">Львів</option>
-                                    <option value="Київ">Київ</option>
-                                    <option value="Харків">Харків</option>
-                                </select></td>
+                                        <option value="Ваше місто" selected disabled>Ваше місто</option>
+                                        <option value="Хмельницький">Хмельницький</option>
+                                        <option value="Житомир">Житомир</option>
+                                        <option value="Львів">Львів</option>
+                                        <option value="Київ">Київ</option>
+                                        <option value="Харків">Харків</option>
+                                    </select></td>
                             </tr>
                             <tr>
                                 <td>Стать:</td>
                                 <td class="r-human">
                                     <label><input type="radio" name="human" value="man"><span>Чоловік</span></label>
                                     <label><input type="radio" name="human" value="woman"><span>Жінка</span></label>
-                                 </td>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Фото:</td>
@@ -224,7 +229,8 @@
                             </tr>
                             <tr>
                                 <td>Коментарій:</td>
-                                <td><textarea name="text" id="s" placeholder="Введіть текст повідомлення"></textarea></td>
+                                <td><textarea name="text" id="s" placeholder="Введіть текст повідомлення"></textarea>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="2"><button type="submit">Зареєструватися</button></td>
@@ -266,13 +272,13 @@
                             </tr>
                             <tr>
                                 <td><select name="country" id="p">
-                                    <option value="Ваша країна" selected disabled>Ваша країна</option>
-                                    <option value="Індонезія">Індонезія</option>
-                                    <option value="Україна">Україна</option>
-                                    <option value="Польща">Польща</option>
-                                    <option value="Молдова">Молдова</option>
-                                    <option value="Німеччина">Німеччина</option>
-                                </select></td>
+                                        <option value="Ваша країна" selected disabled>Ваша країна</option>
+                                        <option value="Індонезія">Індонезія</option>
+                                        <option value="Україна">Україна</option>
+                                        <option value="Польща">Польща</option>
+                                        <option value="Молдова">Молдова</option>
+                                        <option value="Німеччина">Німеччина</option>
+                                    </select></td>
                                 <td colspan="2"><input type="text" class="www" name="adress"></td>
                             </tr>
                             <tr>
@@ -309,4 +315,5 @@
         </div>
     </form>
 </body>
+
 </html>
