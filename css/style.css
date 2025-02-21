@@ -290,7 +290,7 @@ label p{
 .insert p:first-child{
     padding-left: 60px; 
 }
-.insert span:first-child{
+.insert p:first-child{
     padding-left: 45px;
 }
 .insert label:last-child{
