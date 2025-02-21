@@ -109,15 +109,24 @@
                     </div>
                     <div class="insert">
                         <label class="nss flex-between">Статус
-                            <span><input type="checkbox" name="status" value="new"></span>
-                            <span></span>
-                            <p>Новинки</p>
-                            <span><input type="checkbox" name="status" value="shares"></span>
-                            <span></span>
-                            <p>Акційні товари</p>
-                            <span><input type="checkbox" name="status" value="sale"></span>
-                            <span></span>
-                            <p>Розпродаж</p>
+                            <p>
+                                <span class="check"><input type="checkbox" name="status" value="new">
+                                    <span></span>
+                                    <span>Новинки</span>
+                                </span>
+                            </p>
+                            <p>
+                                <span class="check"><input type="checkbox" name="status" value="shares">
+                                    <span></span>
+                                    <span>Акційні товари</span>
+                                </span>
+                            </p>
+                            <p>
+                                <span class="check"><input type="checkbox" name="status" value="sale">
+                                    <span></span>
+                                    <span>Розпродаж</span>
+                                </span>
+                            </p>
                         </label>
                         <label class="flex-between">Дата
                             <p><input type="datetime-local"></p>
@@ -134,22 +143,37 @@
                 <h2>03. стилізовані чекбокси</h2>
                 <div class="flex-between">
                     <div class="human">
-                        <label class="mann flex-between"><input type="checkbox"><p>Чоловік</p></label>
-                        <label class="womann flex-between"><input type="checkbox"><p>Жінка</p></label>
+                        <label class="mann"><input type="radio"><p>Чоловік</p></label>
+                        <label class="womann"><input type="radio"><p>Жінка</p></label>
                     </div>
                     <div class="dddd">
-                        <label>
-                            <input type="checkbox">Отримувати новини
-                            <span class="slider"></span>
-                        </label>
-                        <label>
-                            <input type="checkbox">Купити додому ковбаси
-                            <span class="slider"></span>
-                        </label>
-                        <label>
-                            <input type="checkbox">Включити світло
-                            <span class="slider"></span>
-                        </label>
+                        <p>
+                            <label>
+                                <span class="slider">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </span>
+                                Отримувати новини
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <span class="slider">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </span>
+                                Купити додому ковбаси
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <span class="slider">
+                                    <input type="checkbox">
+                                    <span></span>
+                                </span>
+                                Включити світло
+                            </label>
+                        </p>
                     </div>
                 </div>
                 <div class=""></div>
@@ -163,68 +187,46 @@
                 <h2>04. форма таблицею</h2>
                 <div class="ggg">
                     <h2>Заповніть усі необхідні поля</h2>
-                    <div class="flex-between">
-                        <div class="text">
-                            <p>ФІО:</p>
-                            <p>Пароль:</p>
-                            <p>Місто:</p>
-                            <p>Стать:</p>
-                            <p>Фото:</p>
-                            <p>Коментарій:</p>
-                        </div>
-                        <div class="inputiki">
-                            <p><input type="text" placeholder="Введіть ім’я" name="UserName"></p>
-                            <p><input type="text" placeholder="Введіть не менше 6 символів" minlength="6" name="password"></p>
-                            <p><select name="City" id="n">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td cla>ФІО:</td>
+                                <td><input type="text" placeholder="Введіть ім’я" name="UserName"></td>
+                            </td>
+                            <tr>
+                                <td>Пароль:</td>
+                                <td><input type="text" placeholder="Введіть не менше 6 символів" minlength="6" name="password"></td>
+                            </td>
+                            <tr>
+                                <td>Місто:</td>
+                                <td><select name="City" id="n">
                                     <option value="Ваше місто" selected disabled>Ваше місто</option>
                                     <option value="Хмельницький">Хмельницький</option>
                                     <option value="Житомир">Житомир</option>
                                     <option value="Львів">Львів</option>
                                     <option value="Київ">Київ</option>
                                     <option value="Харків">Харків</option>
-                                </select></p>
-                            <div class="r-human">
-                                <label>
-                                    <p><input type="radio" name="human" value="man">Чоловік</p>
-                                </label>
-                                <label>
-                                    <p><input type="radio" name="human" value="woman">Жінка</p>
-                                </label>
-                            </div>
-                            <p><input type="file" name="file"></p>
-                            <p><textarea name="text" id="s" placeholder="Введіть текст повідомлення"></textarea></p>
-                            <button type="submit">Зареєструватися</button>
-                        </div>
-                    </div>
-                    <!-- <label>
-                        <p>ФІО:<input type="text" placeholder="Введіть ім’я"></p>
-                    </label>
-                    <label>
-                        <p>Пароль:<input type="text" placeholder="Введіть не менше 6 символів" minlength="6"></p>
-                    </label>
-                    <label>Місто:
-                        <select name="City" id="n">
-                            <option value="Ваше місто" selected disabled>Ваше місто</option>
-                            <option value="Хмельницький">Хмельницький</option>
-                            <option value="Житомир">Житомир</option>
-                            <option value="Львів">Львів</option>
-                            <option value="Київ">Київ</option>
-                            <option value="Харків">Харків</option>
-                        </select>
-                    </label>
-                    <label class="flex-between">Стать:
-                        <p><input type="radio">Чоловік</p>
-                        <p><input type="radio">Жінка</p>
-                    </label>
-                    <label>Фото:
-                        <p><input type="text"></p>
-                    </label>
-                    <label>Коментарій:
-                        <p><textarea name="text" id="s" placeholder="Введіть текст повідомлення"></textarea></p>
-                    </label>
-                    <label>
-                        <p><input type="submit"></p>
-                    </label> -->
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Стать:</td>
+                                <td class="r-human"><input type="radio" name="human" value="man">Чоловік</td>
+                                <td class="r-human"><input type="radio" name="human" value="woman">Жінка</td>
+                            </tr>
+                            <tr>
+                                <td>Фото:</td>
+                                <td><input type="file" name="file"></td>
+                            </tr>
+                            <tr>
+                                <td>Коментарій:</td>
+                                <td><textarea name="text" id="s" placeholder="Введіть текст повідомлення"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button type="submit">Зареєструватися</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <hr>
@@ -235,53 +237,62 @@
             <div class="table-form-five">
                 <h2>05. форма таблицею</h2>
                 <div class="ddd">
-                    <div class="flex-between">
-                        <label>Прізвище та ім’я
-                            <p><input type="text" name="userName"></p>
-                        </label>
-                        <label>Ел. пошта
-                            <p><input type="email" name="email"></p>
-                        </label>
-                        <label>Телефон
-                            <p><input type="tel" name="tel"></p>
-                        </label>
-                    </div>
+                    <table>
+                        <tbody class="ffive">
+                            <tr>
+                                <td>Прізвище та ім’я</td>
+                                <td>Ел. пошта</td>
+                                <td>Телефон</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="userName"></td>
+                                <td><input type="email" name="email"></td>
+                                <td><input type="tel" name="tel"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <span>
                         <hr>
                     </span>
-                    <div class="flex-between">
-                        <label>Країна
-                            <p class="county">
-                                <select name="country" id="p">
+                    <table>
+                        <tbody class="ffive">
+                            <tr>
+                                <td>Країна</td>
+                                <td>Адреса</td>
+                            </tr>
+                            <tr>
+                                <td><select name="country" id="p">
                                     <option value="Ваша країна" selected disabled>Ваша країна</option>
                                     <option value="Індонезія">Індонезія</option>
                                     <option value="Україна">Україна</option>
                                     <option value="Польща">Польща</option>
                                     <option value="Молдова">Молдова</option>
                                     <option value="Німеччина">Німеччина</option>
-                                </select>
-                            </p>
-                        </label>
-                        <label>Адреса
-                            <p class="adress"><input type="text" name="adress"></p>
-                        </label>
-                    </div>
-                    <div class="aa flex-between">
-                        <label>Місто
-                            <p><input type="text" name="city"></p>
-                        </label>
-                        <label>Будинок
-                            <p><input type="text" name="house"></p>
-                        </label>
-                        <label>Поштовий індекс
-                            <p><input type="text" name="mail_index"></p>
-                        </label>
-                    </div>
-                    <span>
-                        <hr>
-                    </span>
+                                </select></td>
+                                <td colspan="2"><input type="text" class="www" name="adress"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Місто</td>
+                                <td>Будинок</td>
+                                <td>Поштовий індекс</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="city"></td>
+                                <td><input type="text" name="house"></td>
+                                <td><input type="text" name="mail_index"></td>
+                            </tr>
+                            <tr>
+                        </tbody>
+                    </table>
                     <label class="agree">
-                        <input type="checkbox" name="agree" value="1"><p>Я погоджуюсь з правилами оплати та доставки товару</p>
+                        <p>
+                            <span class="check">
+                                <input type="checkbox" name="agree" value="1">
+                                <span></span>
+                            </span>
+                            <span>Я погоджуюсь з правилами оплати та доставки товару</span>
+                        </p>
                     </label>
                     <span>
                         <hr>

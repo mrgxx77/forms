@@ -64,6 +64,7 @@ hr{
     width: 1000px;
     height: 1px;
     background-color: #e4e4ec;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 textarea{
@@ -105,6 +106,7 @@ option:checked{
 /* стилізація чекбоксів */
 input[type=checkbox]{
     appearance: none;
+    background-color: #fff;
     width: 15px;
     height: 15px;
     border-radius: 3px;
@@ -130,18 +132,15 @@ input[type=checkbox]{
 
 
 /* стилізація чекідів */
-input:checked:not(input[type=checkbox]){
+input:focus:not(input[type=checkbox]){
     border: none;
-    border: #3d69ff;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    border: #3d69ff;
 }
 
 
 
 /* перша форма */
-.simple-form{
-    padding-bottom: 50px;
-}
 .simple-form input[type=text],
 .simple-form input[type=email],
 .simple-form select{
@@ -183,7 +182,6 @@ input:checked:not(input[type=checkbox]){
 
 
 /* шоста форма */
-
 .lll{
     position: sticky;
     padding-top: 25px;
@@ -244,7 +242,6 @@ input:checked:not(input[type=checkbox]){
 .elements{
     align-items: start;
     justify-content: start;
-    padding-bottom: 50px;
 }
 .elements label{
     font-size: 14px;
@@ -313,85 +310,86 @@ label p{
 
 /* третя форма */
 .checkboxes{
-    padding-bottom: 50px;
+    max-width: 680px;
 }
 .human p{
     align-items: center;
     justify-content: center;
-    padding-left: 15px;
     padding-top: 30px;
+    padding-left: 15px;
+}
+.human label{
+    display: flex;
+    align-items: center;
+}
+.human input[type=radio]{
+    appearance: none;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 .human p:checked{
     color: #3e6aff;
 }
-.mann input[type=checkbox]{
-    background-image: url(../img/man.png);
+.mann input[type=radio]{
+    background: url(../img/man.png) no-repeat;
 }
-.womann input[type=checkbox]{
-    background-image: url(../img/woman.png);
+.womann input[type=radio]{
+    background: url(../img/woman.png) no-repeat;
 }
-.mann input:checked{
-    background-image: url(../img/mann.png);
+.mann input[type=radio]:checked{
+    background: url(../img/mann.png) no-repeat;
 }
-.womann input:checked{
-    background-image: url(../img/womann.png);
+.womann input[type=radio]:checked{
+    background: url(../img/womann.png) no-repeat;
 }
-.dddd label {
-    position: relative;
-    display: block; 
-    width: 40px;
-    height: 20px;
-    margin-bottom: 10px;
-    margin-left: -400px;
+
+.dddd{
+    padding-top: 20px;
 }
+.dddd label{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 20px;
+  }
+  .slider{
+      position: relative;
+      display: inline-block;
+  }
+  .dddd input{
+      appearance: none;
+      width: 46px;
+      height: 26px;
+      border-radius: 12px;
+      background-color: #cfcfd1;
+  }
+  .slider span{
+      position: absolute;
+      top: 45%;
+      left: 5%;
+      width: 21px;
+      height: 21px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      transform: translateY(-50%);
+      transition: all .1s ease;
   
-.dddd input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-.dddd span {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    border-radius: 20px;
-    transition: .4s;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    border-radius: 50%;
-    transition: .4s;
-}
-  
-input:checked + .slider {
+  }
+  .dddd input:checked{
     background-color: #3e6aff;
-}
   
-input:checked + .slider:before {
-    transform: translateX(20px);
-}
+  }
+  .dddd input:checked + span {
+    left: 53%;
+  }
 
 
 
 /* четверта форма */
-.table-form{
-    padding-bottom: 50px;
-}
 .inputiki{
     min-width: 500px;/
-    /* justify-content: start; */
 }
 .ggg h2{
     font-size: 18px;
@@ -454,19 +452,28 @@ input:checked + .slider:before {
 .text p{
     padding-bottom: 30px;
 }
+.comm td{
+    align-items: center;
+}
+.r-human{
+    justify-content: start;
+}   
+.ggg td{
+    padding-right: 80px;
+}
+
 
 
 /* п'ята форма */
 .table-form-five{
     max-width: 680px;
 }
-.ddd label{
+.ffive td{
     font-size: 13px;
     color: #b3b3b3; 
     font-weight: 400;
 }
-.ddd input,
-.ddd select{
+.ddd input:not(input[type=checkbox]){
     padding: 12px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -474,19 +481,38 @@ input:checked + .slider:before {
     justify-content: start;
     width: 100%;
 }
-.ddd label p{
-    padding-top: 5px;
+.ddd input:not(input[type=checkbox], .www){
+    max-width: 195px;    
+}
+.ffive td{
+    max-width: 195px;
 }
 .ddd span hr{
-    max-width: 706px;
+    margin-top: 20px;
+    max-width: 675px;
     margin-bottom: 25px;
 }
-.county{
-    min-width: 220px;
+.www{
+    max-width: 420px;
 }
-.adress{
-    min-width: 450px;
+.ddd select{
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: start;
+    width: 100%;
+    max-width: 220px;
 }
+.agree input:checked + span{
+    top: 30%;
+    left: 45%;
+    width: 5px;
+    height: 8px;
+    border-top: 2px solid #3e6aff;
+    border-left: 2px solid #3e6aff;
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
 .sss button[type=submit]{
     min-width: 180px;
     min-height: 43px;
@@ -505,4 +531,11 @@ input:checked + .slider:before {
     background-color: #ffffff;
     border: 1px solid #85868d;  
     color: #6e6f77;
+}
+.ddd table{
+    width: 100%;
+    margin-bottom: 13px;
+}
+.ffive td{
+    column-gap: 10px;
 }
