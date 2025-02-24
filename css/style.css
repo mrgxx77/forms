@@ -141,8 +141,9 @@ input[type=radio]{
     background-color: #fff;
 }
 input[type=radio]:checked{
+    background-color: #3e6aff;
     border: 4px solid #fff;  
-    background-color: #3d69ff;
+    outline: 1px solid #3d69ff;
 }
 
 
@@ -291,34 +292,29 @@ label p:has(input:disabled){
     margin-bottom: 15px;
 }
 .insert{
-    /* max-width: 473px; */
-    /* max-height: 114px; */
+    min-width: 473px;
+    max-height: 114px;
     border-radius: 3px;
     background-color: #f7f7f7;
     border: 1px solid #e5e5e5;
 }
 .insert p{
-    padding: 0px 20px;
+    padding-left: 20px;
 }
 .insert p:first-child{
     padding-top: 25px;
     justify-content: start;
-    padding-bottom: 15px;    
+    padding-bottom: 13px;    
 }
 
-.insert label:last-child{
-    /* padding-bottom: 30px; */
-    justify-content: start;
-}
 .insert label{
-    padding-left: 6px;
-    padding-right: 25px;
+    padding-right: 25px;    
 }
 .insert label:first-child{
     margin-left: 35px;
 }
-.nss p{
-    column-gap: 5px;
+label:has(input[type=datetime-local]){
+    padding-right: 45px;
 }
 
 
@@ -435,10 +431,6 @@ label p:has(input:disabled){
 }
 .r-human input{
     margin-bottom: 20px;
-}
-.r-human span{
-    padding-left: 10px;
-    padding-right: 48px;
 }
 .ggg button[type=file]{
     padding: 16px 37px;
