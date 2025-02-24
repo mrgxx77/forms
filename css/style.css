@@ -1,30 +1,3 @@
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Medium.woff') format('woff'),
-        url('../fonts/RobotoSlab-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Regular.woff') format('woff'),
-        url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
-        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
 
 *{
     margin: 0;
@@ -69,6 +42,7 @@ hr{
 }
 textarea{
     resize: vertical;
+    font-family: "Roboto";
 }
 input,
 textarea,
@@ -226,11 +200,19 @@ input:focus:not(input[type=checkbox], input[type=radio]){
 }
 .l {
     font-size: 13px;
-    color: #3e6aff;
     font-weight: 400;
     font-family: "Roboto";
     margin-left: 25px;
     padding-bottom: 10px;
+    cursor: pointer;
+}
+.l a{
+    color: #3e6aff;
+    text-decoration: none;
+}
+.l:hover{
+    text-decoration: underline;
+    color: #3e6aff;
 }
 .lll button[type=submit]{
     min-width: 260px;
@@ -465,7 +447,7 @@ label:has(input[type=datetime-local]){
     color: #ffffff;
     font-weight: 700;
     text-align: center;
-    margin-left: 165px; 
+    margin-left: 172px; 
 }
 .text p{
     padding-bottom: 30px;
