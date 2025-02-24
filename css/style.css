@@ -151,6 +151,7 @@ input:focus:not(input[type=checkbox], input[type=radio]){
     border: none;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
     border: #3d69ff;
+    outline: none;
 }
 
 
@@ -220,6 +221,7 @@ input:focus:not(input[type=checkbox], input[type=radio]){
 }
 .lll p:has(input[type=text]){
     margin-top: 10px;
+    margin-bottom: 12px;
 }
 .l {
     font-size: 13px;
@@ -281,15 +283,16 @@ input:focus:not(input[type=checkbox], input[type=radio]){
 label p:has(input:disabled){
     color: #b3b3b3;
 }
-label p{
+.elements p,
+.insert p{
     font-size: 14px;
     color: #1f222c;
-    font-weight: 400;
+    font-weight: 700px;
     margin-bottom: 15px;
 }
 .insert{
-    width: 473px;
-    height: 114px;
+    /* max-width: 473px; */
+    /* max-height: 114px; */
     border-radius: 3px;
     background-color: #f7f7f7;
     border: 1px solid #e5e5e5;
@@ -300,21 +303,19 @@ label p{
 .insert p:first-child{
     padding-top: 25px;
     justify-content: start;
-    padding-bottom: 15px;
+    padding-bottom: 15px;    
 }
-.insert label:first-child{
-    padding-left: 60px; 
-}
-.insert label:first-child{
-    padding-left: 45px;
-}
+
 .insert label:last-child{
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     justify-content: start;
 }
 .insert label{
     padding-left: 6px;
     padding-right: 25px;
+}
+.insert label:first-child{
+    margin-left: 35px;
 }
 .nss p{
     column-gap: 5px;
@@ -343,6 +344,7 @@ label p{
     height: 73px;
     border-radius: 50%;
     margin-bottom: 10px;
+    border: none;
 }
 .human input:checked + p{
     color: #3e6aff;
@@ -386,7 +388,7 @@ label p{
       left: 5%;
       width: 21px;
       height: 21px;
-      border-radius: 10px;
+      border-radius: 12px;
       background-color: #ffffff;
       transform: translateY(-50%);
       transition: all .1s ease;
