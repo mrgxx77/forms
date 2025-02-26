@@ -120,12 +120,42 @@ input[type=radio]:checked{
     outline: 1px solid #3d69ff;
 }
 
+/* стилізація селектів */
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+.custom-select select {
+    appearance: none;
+}
+/* Кастомна стрілочка */
+.custom-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 5px;
+    background-color: #1f222c;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    margin-right: 10px;
+    margin-top: -3px;
+}
+
+.table-form  .custom-select::after{
+    margin-right: 85px;
+}
+.table-form-five .custom-select::after{
+    margin-right: -20px;
+}
 
 /* стилізація чекідів */
-input:focus:not(input[type=checkbox], input[type=radio]){
+input:focus:not(input[type=checkbox], input[type=radio]),
+textarea:focus{
     border: none;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
-    border: #3d69ff;
+    border: 1px solid #3e6aff;
     outline: none;
 }
 
@@ -173,20 +203,46 @@ input:focus:not(input[type=checkbox], input[type=radio]){
 
 
 /* шоста форма */
+.close-icon {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    top: 15px;
+    right: 15px;
+}
+  
+.close-icon::before,
+.close-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #949494;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+  
+.close-icon::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
 .lll{
-    position: sticky;
+    top: 50px;
+    z-index: 2;
+    position: sticky;   
     padding-top: 25px;
     width: 310px;
     height: 282px;
     border-radius: 5px;
     filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
     background-color: #fafafa;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #e6e6e6;  
 }
 .lll input[type=text]{
-    
-    min-width: 260px;
+    min-width: 245px;
     min-height: 36px;
+    padding-left: 15px;
 }
 .lll label:has(input[type=text]){
     font-size: 13px;
@@ -261,9 +317,10 @@ input:focus:not(input[type=checkbox], input[type=radio]){
 }
 .radio input,
 .checkbox input{
+    justify-content: center;
     margin-right: 10px;
 }   
-label p:has(input:disabled){
+label:has(input:disabled){
     color: #b3b3b3;
 }
 .elements p,
@@ -307,9 +364,6 @@ label:has(input[type=datetime-local]){
     max-width: 680px;
 }
 .human p{
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
     padding-left: 15px;
 }
 .human label{
@@ -323,6 +377,7 @@ label:has(input[type=datetime-local]){
     border-radius: 50%;
     margin-bottom: 10px;
     border: none;
+    outline: none;
 }
 .human input:checked + p{
     color: #3e6aff;
@@ -378,7 +433,7 @@ label:has(input[type=datetime-local]){
   }
   .dddd input:checked + span {
     left: 70%;
-    top: 45%;
+    top: 48%;
     width: 21px;
     height: 21px;
   }
@@ -499,7 +554,7 @@ label:has(input[type=datetime-local]){
     font-weight: 400;
     justify-content: start;
     width: 100%;
-    max-width: 220px;
+    min-width: 220px;
 }
 .agree input:checked + span{
     top: 30%;
