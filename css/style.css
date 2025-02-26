@@ -104,7 +104,6 @@ input[type=checkbox]{
     transform: translate(-50%, -50%) rotate(-135deg);
 }
 
-
 /* стилізація радіо кнопок */
 input[type=radio]{
     appearance: none;
@@ -314,6 +313,7 @@ textarea:focus{
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
+    align-items: center;
 }
 .radio input,
 .checkbox input{
@@ -467,7 +467,13 @@ label:has(input[type=datetime-local]){
     min-width: 340px;
 }
 .r-human input{
-    margin-bottom: 20px;
+    margin-right: 5px;
+} 
+.r-human label:first-child{
+    margin-right: 30px;
+}
+.r-human{
+    padding-bottom: 20px;
 }
 .ggg button[type=file]{
     padding: 16px 37px;
@@ -491,6 +497,7 @@ label:has(input[type=datetime-local]){
     padding: 12px;
     font-size: 14px;
     font-weight: 400;
+    outline: none;
 }
 .ggg button[type=submit]{
     min-width: 340px;
