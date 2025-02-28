@@ -203,6 +203,11 @@ select:focus{
 
 
 /* шоста форма */
+.fixed_form{
+    top: 50px;
+    z-index: 1;
+    position: sticky; 
+}
 .close-icon {
     position: absolute;
     width: 10px;
@@ -227,10 +232,7 @@ select:focus{
 .close-icon::after {
     transform: translateY(-50%) rotate(-45deg);
 }
-.lll{
-    top: 50px;
-    z-index: 2;
-    position: sticky;   
+.lll{  
     padding-top: 25px;
     width: 310px;
     height: 282px;
