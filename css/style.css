@@ -594,6 +594,14 @@ label:has(input[type=datetime-local]){
     border: 1px solid #85868d;  
     color: #6e6f77;
 }
+.back:hover{
+    background-color: #85868d;
+    transition: all 1s ease;
+}
+.purchase:hover{
+    background-color: #07be51;
+    transition: all 1s ease;
+}
 .ddd table{
     width: 100%;
     margin-bottom: 13px;
