@@ -596,6 +596,7 @@ label:has(input[type=datetime-local]){
 }
 .back:hover{
     background-color: #85868d;
+    color: #fff;
     transition: all 1s ease;
 }
 .purchase:hover{
@@ -608,4 +609,13 @@ label:has(input[type=datetime-local]){
 }
 .ffive td{
     column-gap: 10px;
+}
+.before::before{
+    content: "";
+    width: 1px;
+    height: 19px;
+    background-color: #cccccc;
+    position: absolute;
+    right: 10px;
+    top: 12px;
 }
