@@ -229,9 +229,6 @@ select:focus{
     top: 50px;
     z-index: 2;
     position: fixed;
-    padding-top: 135px;
-    padding-right: 100px;
-    right: 150px;
 }
 .close-icon {
     position: absolute;
