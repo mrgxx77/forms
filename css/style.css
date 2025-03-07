@@ -112,6 +112,9 @@ input[type=checkbox]:checked+ span{
     border-left: 2px solid #3e6aff;
     transform: translate(-50%, -50%) rotate(-135deg);
 }
+input[type=checkbox]:checked{
+    border-color: #3e6aff;
+}
 label:has(input[type=checkbox]){
     display: flex;
     column-gap: 5px;
@@ -228,6 +231,9 @@ select:focus{
 .fixed_form{
     z-index: 2;
     position: fixed;
+    right: 50%;
+    top: 0;
+    transform: translate(160%, 50%);
 }
 .close-icon {
     position: absolute;
@@ -447,8 +453,9 @@ label:has(input[type=datetime-local]){
   
   }
   .dddd input:checked + span {
+    border: none;
     left: 70%;
-    top: 45%;
+    top: 44%;
     width: 21px;
     height: 21px;
   }
@@ -469,7 +476,7 @@ label:has(input[type=datetime-local]){
     color: #1f222c;
     font-weight: 400;
 }
-.ggg input:not(input[type=file], input[type=radio]),
+.ggg input:not(button[type=file], input[type=radio]),
 .ggg select{
     min-width: 315px;
     min-height: 11px;
@@ -501,6 +508,9 @@ label:has(input[type=datetime-local]){
     font-family: "Roboto";
     text-align: center;
     margin-bottom: 15px;
+}
+.ggg button[type=file]:hover{
+    background-color: #2251ec;
 }
 ::placeholder{
     color: #b3b3b3;
