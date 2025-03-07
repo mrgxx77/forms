@@ -226,7 +226,6 @@ select:focus{
 
 /* шоста форма */
 .fixed_form{
-    top: 50px;
     z-index: 2;
     position: fixed;
 }
